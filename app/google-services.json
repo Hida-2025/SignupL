@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "559710533291",
+    "firebase_url": "https://signupl-da42b-default-rtdb.firebaseio.com",
+    "project_id": "signupl-da42b",
+    "storage_bucket": "signupl-da42b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559710533291:android:a6b769e56849a36462e9ee",
+        "android_client_info": {
+          "package_name": "hida.example.signupl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559710533291-ohihcqr7tbuiupt68mbdsd65l0i6i7n7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hida.example.signupl",
+            "certificate_hash": "91f9f265e5132c383efe1f307945af3b544000fa"
+          }
+        },
+        {
+          "client_id": "559710533291-doilm27t920eat5vpipkr28mpguffr16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLNULrdIPp1OG5IwRIkNgRhSKml810WDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559710533291-doilm27t920eat5vpipkr28mpguffr16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

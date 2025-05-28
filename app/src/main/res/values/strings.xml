@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SignupL</string>
+    <!-- Utilisez le client_id de type 1 (Android) depuis votre google-services.json -->
+    <string name="default_web_client_id">559710533291-ohihcqr7tbuiupt68mbdsd65l0i6i7n7.apps.googleusercontent.com</string>
+    <string name="google_sign_in">Se connecter avec Google</string>
+    <string name="facebook_app_id"> 667787282686889</string>
+    <string name="facebook_client_token">999ebdfaf51d9c1ce70e7d9377cb57a9
+</string>
+    <string name="fb_login_protocol_scheme">fb667787282686889</string>
+
+
+</resources>
