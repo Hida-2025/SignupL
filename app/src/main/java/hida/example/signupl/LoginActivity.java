@@ -1,11 +1,11 @@
 package hida.example.signupl;
-
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.*;
+
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.IntentSenderRequest;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -94,7 +94,9 @@ public class LoginActivity extends AppCompatActivity {
         googleLogin.setOnClickListener(v -> handleGoogleLogin());
         facebookLogin.setOnClickListener(v -> handleFacebookLogin());
         forgotPassword.setOnClickListener(v -> handleForgotPassword());
-        signupRedirect.setOnClickListener(v -> startActivity(new Intent(this, SignupActivity.class)));
+
+        // ✅ Redirection vers SelectRoleActivity au lieu de SignupActivity
+        signupRedirect.setOnClickListener(v -> startActivity(new Intent(this, SelectRoleActivity.class)));
     }
 
     private void handleClassicLogin() {

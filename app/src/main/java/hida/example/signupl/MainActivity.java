@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button goToSignupButton = findViewById(R.id.goToSignupButton);
         goToSignupButton.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, SignupActivity.class);
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });

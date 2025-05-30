@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/beige"
     android:orientation="vertical"
-    android:paddingHorizontal="16dp">
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp">
 
     <!-- Header Section -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_marginTop="40dp"
         android:gravity="center"
-        android:layout_marginTop="40dp">
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/happy_monkey"
             android:text="Hello !"
-            android:textSize="36sp"
-            android:fontFamily="@font/happy_monkey"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="36sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to Jobsy"
-            android:textSize="28sp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/happy_monkey"
+            android:text="Welcome to Jobsy"
             android:textColor="@color/yellow"
-            android:layout_marginTop="8dp"/>
+            android:textSize="28sp" />
     </LinearLayout>
 
     <!-- Main Card -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="16dp"
+        android:layout_weight="1"
         android:background="@drawable/carreb"
         android:elevation="4dp">
 
@@ -52,19 +52,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:gravity="center_horizontal"
+                android:orientation="vertical"
                 android:padding="24dp">
 
                 <!-- Title -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="@font/happy_monkey"
                     android:text="Login"
                     android:textColor="@color/yellow"
-                    android:textSize="28sp"
-                    android:fontFamily="@font/happy_monkey"
-                    android:layout_marginBottom="24dp"/>
+                    android:textSize="28sp" />
 
                 <!-- Email Input -->
                 <RelativeLayout
@@ -77,7 +77,7 @@
                         android:id="@+id/NameIcon"
                         android:layout_width="28dp"
                         android:layout_height="28dp"
-                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/name" />
 
@@ -88,13 +88,13 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="60dp"
                         android:background="@null"
+                        android:backgroundTint="@color/black"
+                        android:hint="Name"
                         android:inputType="textEmailAddress"
                         android:padding="8dp"
-                        android:textSize="14sp"
-                        android:hint="Name"
-                        android:backgroundTint="@color/black"
                         android:textColor="@color/black"
-                        tools:ignore="LabelFor"/>
+                        android:textSize="14sp"
+                        tools:ignore="LabelFor" />
                 </RelativeLayout>
 
                 <!-- Password Input -->
@@ -109,7 +109,7 @@
                         android:id="@+id/passIcon"
                         android:layout_width="28dp"
                         android:layout_height="28dp"
-                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
                         android:src="@drawable/locked" />
 
@@ -120,25 +120,23 @@
                         android:layout_centerVertical="true"
                         android:layout_marginStart="60dp"
                         android:background="@null"
+                        android:backgroundTint="@color/beige"
+                        android:hint="Password"
                         android:inputType="textPassword"
                         android:padding="8dp"
-                        android:textSize="14sp"
-                        android:hint="Password"
-                        android:backgroundTint="@color/beige"
                         android:textColor="@color/black"
-                        tools:ignore="LabelFor"/>
+                        android:textSize="14sp"
+                        tools:ignore="LabelFor" />
 
-                    <!-- Show/Hide Password Toggle -->
                     <ImageView
                         android:id="@+id/togglePassword"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
-                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="8dp"
-                        android:src="@drawable/ic_visibility_off"
-                        android:contentDescription="Toggle password visibility"/>
-
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="Toggle password visibility"
+                        android:src="@drawable/ic_visibility_off" />
                 </RelativeLayout>
 
                 <!-- Forgot Password -->
@@ -146,12 +144,12 @@
                     android:id="@+id/forgotPassword"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end"
                     android:layout_marginTop="12dp"
                     android:fontFamily="@font/happy_monkey"
                     android:text="Forgot password?"
                     android:textColor="@color/yellow"
-                    android:textSize="14sp"
-                    android:layout_gravity="end"/>
+                    android:textSize="14sp" />
 
                 <!-- Login Button -->
                 <Button
@@ -160,13 +158,13 @@
                     android:layout_height="50dp"
                     android:layout_marginTop="24dp"
                     android:backgroundTint="@color/yellow"
+                    android:elevation="4dp"
                     android:fontFamily="@font/happy_monkey"
                     android:gravity="center"
                     android:text="LOGIN"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
                     android:textAllCaps="false"
-                    android:elevation="4dp"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
 
                 <!-- Progress Indicator -->
                 <ProgressBar
@@ -174,7 +172,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:visibility="gone"/>
+                    android:visibility="gone" />
 
                 <!-- Social Login Divider -->
                 <TextView
@@ -184,7 +182,7 @@
                     android:fontFamily="@font/happy_monkey"
                     android:text="Or login with"
                     android:textColor="@color/yellow"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <!-- Social Login Buttons -->
                 <LinearLayout
@@ -199,16 +197,14 @@
                         android:layout_height="40dp"
                         android:layout_marginEnd="46dp"
                         android:background="@drawable/google"
-                        android:contentDescription="Google login"/>
-
-
+                        android:contentDescription="Google login" />
 
                     <ImageButton
                         android:id="@+id/facebookLogin"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:background="@drawable/communication"
-                        android:contentDescription="Apple login"/>
+                        android:contentDescription="Facebook login" />
                 </LinearLayout>
 
                 <!-- Sign Up Prompt -->
@@ -224,7 +220,7 @@
                         android:fontFamily="@font/happy_monkey"
                         android:text="Don't have an account?"
                         android:textColor="@color/black"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/signupRedirect"
@@ -234,7 +230,7 @@
                         android:fontFamily="@font/happy_monkey"
                         android:text="Sign up"
                         android:textColor="@color/yellow"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp" />
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

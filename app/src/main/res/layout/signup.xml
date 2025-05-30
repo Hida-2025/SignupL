@@ -1,286 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/beige"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@color/beige">
 
-    <!-- En-tête -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
-        android:layout_marginTop="30dp">
+        android:paddingTop="12dp"
+        android:paddingBottom="20dp"
+        android:gravity="center_horizontal">
 
+        <!-- Bouton retour -->
+        <ImageButton
+            android:id="@+id/btnRetour"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:background="@drawable/retour"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Texte prénom -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello !"
-            android:textSize="36sp"
+            android:text="What is your name?"
+            android:textSize="18sp"
+            android:textColor="@color/B1"
             android:fontFamily="@font/happy_monkey"
-            android:textColor="@color/black" />
+            android:layout_marginTop="12dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome to Jobsy"
-            android:textSize="24sp"
-            android:fontFamily="@font/happy_monkey"
-            android:textColor="@color/yellow"
-            android:layout_marginTop="8dp"/>
-    </LinearLayout>
-
-    <!-- Carte principale -->
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/carreb"
-        android:elevation="8dp">
-
-        <ScrollView
+        <!-- Prénom et Nom -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
 
-            <LinearLayout
+            <EditText
+                android:id="@+id/edit_first_name"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/input"
+                android:fontFamily="@font/happy_monkey"
+                android:hint="First name"
+                android:padding="8dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_last_name"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/input"
+                android:fontFamily="@font/happy_monkey"
+                android:hint="Last name"
+                android:padding="8dp"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Date de naissance -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is your date of birth?"
+            android:textSize="18sp"
+            android:textColor="@color/B1"
+            android:fontFamily="@font/happy_monkey"
+            android:layout_marginTop="12dp" />
+
+        <RelativeLayout
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/icon_calendar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/calendar"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <EditText
+                android:id="@+id/edit_birth_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
+                android:layout_toEndOf="@id/icon_calendar"
+                android:layout_marginStart="8dp"
+                android:hint="dd/mm/yyyy"
+                android:padding="8dp"
+                android:focusable="false"
+                android:clickable="true"
+                android:textSize="14sp"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
 
-                <!-- Titre -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sign Up"
-                    android:textColor="@color/yellow"
-                    android:textSize="28sp"
-                    android:fontFamily="@font/happy_monkey"
-                    android:layout_marginTop="24dp"/>
+        <!-- Genre -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is your gender?"
+            android:textSize="18sp"
+            android:textColor="@color/B1"
+            android:fontFamily="@font/happy_monkey"
+            android:layout_marginTop="12dp" />
 
-                <!-- Champ Nom -->
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="24dp"
-                    android:background="@drawable/input"
-                    android:padding="12dp">
+        <RadioGroup
+            android:id="@+id/radio_group_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
 
-                    <ImageView
-                        android:id="@+id/NameIcon"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/name" />
+            <RadioButton
+                android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:fontFamily="@font/happy_monkey"
+                android:textColor="@color/black" />
 
-                    <EditText
-                        android:id="@+id/yourEditName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="60dp"
-                        android:background="@null"
-                        android:padding="8dp"
-                        android:textSize="14sp"
-                        android:hint="Name"
-                        android:backgroundTint="@color/black"/>
-                </RelativeLayout>
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/happy_monkey"
+                android:textColor="@color/black" />
 
-                <!-- Champ Email -->
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/input"
-                    android:padding="12dp">
+            <RadioButton
+                android:id="@+id/radio_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/happy_monkey"
+                android:textColor="@color/black" />
+        </RadioGroup>
 
-                    <ImageView
-                        android:id="@+id/mailIcon"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/mail" />
+        <!-- Numéro de téléphone -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is your mobile number?"
+            android:textSize="18sp"
+            android:textColor="@color/B1"
+            android:fontFamily="@font/happy_monkey"
+            android:layout_marginTop="12dp" />
 
-                    <EditText
-                        android:id="@+id/yourEditTextName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="60dp"
-                        android:background="@null"
-                        android:inputType="textEmailAddress"
-                        android:padding="8dp"
-                        android:textSize="14sp"
-                        android:hint="Email"
-                        android:backgroundTint="@color/black"/>
-                </RelativeLayout>
+        <EditText
+            android:id="@+id/edit_phone_number"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input"
+            android:fontFamily="@font/happy_monkey"
+            android:hint="Phone number"
+            android:inputType="phone"
+            android:padding="8dp"
+            android:textColor="@color/black" />
 
-                <!-- Champ Mot de passe -->
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/input"
-                    android:padding="12dp">
+        <!-- Email -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is your email address?"
+            android:textSize="18sp"
+            android:textColor="@color/B1"
+            android:fontFamily="@font/happy_monkey"
+            android:layout_marginTop="12dp" />
 
-                    <ImageView
-                        android:id="@+id/passIcon"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/locked" />
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input"
+            android:fontFamily="@font/happy_monkey"
+            android:hint="Email address"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:textColor="@color/black" />
 
-                    <EditText
-                        android:id="@+id/yourpasw"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="60dp"
-                        android:background="@null"
-                        android:inputType="textPassword"
-                        android:padding="8dp"
-                        android:textSize="14sp"
-                        android:hint="Password"
-                        android:backgroundTint="@color/black"/>
-                </RelativeLayout>
+        <!-- Bouton inscription -->
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:backgroundTint="@color/yellow"
+            android:fontFamily="@font/happy_monkey"
+            android:layout_marginTop="20dp"
+            android:minHeight="40dp"
+            android:paddingVertical="6dp" />
 
-                <!-- Genre -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="What is your gender?"
-                    android:textColor="@color/beige"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/happy_monkey"
-                    android:layout_marginTop="24dp"/>
+        <!-- Boutons Google / Facebook -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
 
-                <RadioGroup
-                    android:id="@+id/radio_group_gender"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="8dp">
+            <ImageButton
+                android:id="@+id/btn_google_signin"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/google"
+                android:background="@drawable/circle_background"
+                android:contentDescription="Sign in with Google"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerInside"
+                android:padding="6dp" />
 
-                    <RadioButton
-                        android:id="@+id/radio_male"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Male"
-                        android:layout_marginEnd="16dp"
-                        android:fontFamily="@font/happy_monkey"
-                        android:textColor="@color/beige"/>
+            <ImageButton
+                android:id="@+id/btn_facebook_signin"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/communication"
+                android:background="@drawable/circle_background"
+                android:contentDescription="Sign in with Facebook"
+                android:scaleType="centerInside"
+                android:padding="6dp" />
+        </LinearLayout>
 
-                    <RadioButton
-                        android:id="@+id/radio_female"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Female"
-                        android:layout_marginEnd="16dp"
-                        android:fontFamily="@font/happy_monkey"
-                        android:textColor="@color/beige"/>
-
-                    <RadioButton
-                        android:id="@+id/radio_other"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Other"
-                        android:fontFamily="@font/happy_monkey"
-                        android:textColor="@color/beige"/>
-                </RadioGroup>
-
-                <!-- Bouton d'inscription -->
-                <Button
-                    android:id="@+id/signup"
-                    android:layout_width="160dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="32dp"
-                    android:backgroundTint="@color/yellow"
-                    android:fontFamily="@font/happy_monkey"
-                    android:text="Sign Up"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:elevation="4dp"/>
-
-                <!-- Séparateur -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="or sign up with"
-                    android:textColor="@color/yellow"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/happy_monkey"
-                    android:layout_marginTop="24dp"/>
-
-                <!-- Boutons sociaux alignés et même taille -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="16dp"
-                    android:gravity="center">
-
-                    <ImageButton
-                        android:id="@+id/google_image_button"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_marginEnd="46dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="@string/google_sign_in"
-                        android:src="@drawable/google"
-                        android:scaleType="centerCrop"
-                        android:clickable="true"
-                        android:focusable="true" />
-
-
-
-                    <ImageButton
-                        android:id="@+id/facebook_image_button"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Apple"
-                        android:src="@drawable/communication"
-                        android:scaleType="centerCrop"
-                        android:clickable="true"
-                        android:focusable="true" />
-                </LinearLayout>
-
-                <!-- Lien vers la page de connexion -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="24dp"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Already have an account?"
-                        android:textColor="@color/yellow"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/happy_monkey" />
-
-                    <TextView
-                        android:id="@+id/login_link"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text=" Login"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/happy_monkey"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-            </LinearLayout>
-        </ScrollView>
-    </FrameLayout>
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -26,15 +26,26 @@
             </intent-filter>
         </activity>
 
-        <!-- Signup screen -->
+        <!-- Login screen -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <!-- Signup screen for Students -->
         <activity
             android:name=".SignupActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
-        <!-- Login screen -->
+        <!-- Signup screen for Employers -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".SignUpEmployer"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Role selection screen -->
+        <activity
+            android:name=".SelectRoleActivity"
             android:exported="false" />
 
         <!-- Facebook SDK configuration -->
@@ -53,6 +64,7 @@
     </application>
 
 </manifest>
+
 
 
 
